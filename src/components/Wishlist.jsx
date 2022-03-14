@@ -3,6 +3,7 @@ import "../assets/styles.css";
 // import ReactDOM from "react-dom";
 
 const Wishlist = () => {
+    const [count,setCount] = React.useState(0);
     const [query, setQuery] = React.useState("");
     const [items, setItems] = React.useState([]);
 
@@ -19,7 +20,16 @@ const Wishlist = () => {
     
             let updatedList = [...items, payload];
             setItems(updatedList);
+            setCount(count + 1);
     }
+
+    if(count > 3){
+        return (
+        <>
+        <h3>"You cannot add more than 3 items to wishlist"</h3>
+        </>
+        )
+       }
 
     return (
         <>
