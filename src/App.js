@@ -1,4 +1,3 @@
-import './App.css';
 import Wishlist from './components/Wishlist';
 import Vegetables from './components/Vegetables';
 
